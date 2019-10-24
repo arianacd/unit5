@@ -11,6 +11,7 @@ import random
 # for x in range(user_lower, user_upper + 1):
 #     print(x)
 # if user_lower > user_upper:
+#     # the -1 includes the lowest number
 #     for x in range(user_lower, user_upper - 1, - 1):
 #         print(x)
 
@@ -42,3 +43,47 @@ import random
 
 
 # ex. 5
+# multiples = 0
+# for x in range(3, 1000):
+#     if (x % 3) == 0 or (x % 5) == 0:
+#         multiples = multiples + x
+# print("the sum of all the multiples of 3 and 5 between 1 and 1000 are", multiples)
+
+
+# ex. 6
+# x = 0
+# user_num = int(input("please enter a number"))
+# while x < user_num + 1:
+#     print("* " * x)
+#     x = x + 1
+
+
+# ex. 7
+# tries = 0
+# total = 0
+# product = 1
+# while True:
+#     user_guess = input("enter a number")
+#     if user_guess == "q":
+#         break
+#     user_guess = int(user_guess)
+#     tries += 1
+#     total = total + user_guess
+#     product = product * user_guess
+# print("the average of your numbers is", total / tries, "and the product is", product)
+
+
+# ex. 8
+num = int(input("please enter a number"))
+steps = 0
+while num != 1:
+    if (num % 2) == 0:
+        even = num / 2
+        print(num, "->", num, "/2 =", even)
+        num = even
+    else:
+        odd = num * 3 + 1
+        print(num, "->", num, "* 3 + 1 =", odd)
+        num = odd
+    steps += 1
+print("it took you", steps, "steps to get to 1")
